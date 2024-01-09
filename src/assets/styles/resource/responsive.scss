@@ -1,0 +1,7 @@
+$breakpoint: 767px;
+
+@mixin media-query-sp {
+  @media (width <= $breakpoint) {
+    @content;
+  }
+}
