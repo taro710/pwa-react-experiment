@@ -13,6 +13,18 @@
   <body>
     <div id="root" />
     <script type="module" src="/src/main.tsx"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <!-- PWA -->
+    <script type="text/javascript">
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./serviceWorker.js").then(
+          (registration) =>
+            console.log(
+              "Success ServiceWorker registration with scope: ",
+              registration.scope
+            ),
+          (err) => console.error("Failed ServiceWorker registration:", err)
+        );
+      });
+    </script>
   </body>
 </html>
