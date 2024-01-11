@@ -1,0 +1,53 @@
+@use "/src/assets/styles/resource/index.scss" as *;
+
+.page-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.page-body {
+  position: fixed;
+  top: 3rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  border-top: 1px solid $gray;
+
+  > .textarea {
+    box-sizing: border-box;
+    width: 50vw;
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline-color: $teal;
+  }
+
+  > .preview {
+    box-sizing: border-box;
+    display: block;
+    width: 50vw;
+    padding: 1rem;
+    overflow-y: scroll;
+    word-break: break-all;
+    background-color: $black;
+  }
+}
+
+@include media-query-sp {
+  .page-body {
+    flex-direction: column;
+    width: 100vw;
+
+    > .textarea {
+      width: 100%;
+      height: 50vh;
+    }
+
+    > .preview {
+      width: 100%;
+      height: 50vh;
+    }
+  }
+}

@@ -1,2 +1,2 @@
-@import './color.scss';
-@import './responsive.scss';
+@forward "./color.scss";
+@forward "./mediaquery.scss";

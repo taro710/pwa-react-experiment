@@ -1,0 +1,43 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.page-body {
+  position: fixed;
+  top: 3rem;
+  right: 0;
+  bottom: 3rem;
+  left: 0;
+  padding: 0 1rem;
+  overflow-y: scroll;
+
+  > .memo {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid gray;
+
+    > .title {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .text {
+      overflow: hidden;
+      font-size: 0.85rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  > .memo:hover {
+    opacity: 0.7;
+    transition: all 0.1s ease-in-out;
+  }
+}

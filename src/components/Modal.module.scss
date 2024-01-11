@@ -1,0 +1,30 @@
+@use "/src/assets/styles/resource/index.scss" as *;
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0002;
+}
+
+.modal {
+  width: 32rem;
+  padding: 1rem;
+  background: #fff;
+}
+
+.input {
+  width: 29rem;
+  padding: 0.5rem;
+}
+
+.control {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
