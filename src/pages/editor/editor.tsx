@@ -6,6 +6,7 @@ import Header from "../../components/Layout/Header";
 import { useEffect, useState } from "react";
 import ConvertMarkdownWorker from "../../worker/markdownConverter?worker";
 import style from "./editor.module.scss";
+import { PAGE_PATH } from "../../constants/path";
 
 const convertMarkdownWorker = new ConvertMarkdownWorker();
 
@@ -34,7 +35,7 @@ const Editor: React.FC<Props> = ({ setText, text }: Props) => {
       <div className={style["page-header"]}>
         <Header title="Markdown Editor">
           <Button onClick={() => setShowModal(true)}>Save</Button>
-          <Link to="/history">history</Link>
+          <Link to={PAGE_PATH.HISTORY}>history</Link>
         </Header>
       </div>
 

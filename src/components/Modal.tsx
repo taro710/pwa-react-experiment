@@ -10,26 +10,33 @@ type Props = {
 };
 
 export const Modal: React.FC<Props> = ({ onCancel, onSave }: Props) => {
-  const [title, setTitle] = useState(new Date().toISOString());
+  const [title, setTitle] = useState(
+    new Date().toLocaleDateString("us-en", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    })
+  );
 
   return (
-    <div className={style["wrapper"]}>
+    <div className={style["modal-wrapper"]}>
       <div className={style["modal"]}>
-        <p>テキストの内容を保存します。</p>
-        <p>保存内容のタイトルを入力して「保存」ボタンを押してください。</p>
-        <p>
-          <input
-            className={style["input"]}
-            type="text"
-            value={title}
-            onChange={(event) => setTitle(event.target.value)}
-          />
-        </p>
+        <p>Text will be saved in history.</p>
+        <input
+          className={style["input"]}
+          type="text"
+          placeholder="Title"
+          onChange={(event) => setTitle(event.target.value)}
+        />
+
         <div className={style["control"]}>
           <Button onClick={onCancel} cancel>
-            キャンセル
+            cancel
           </Button>
-          <Button onClick={() => onSave(title)}>保存</Button>
+          <Button onClick={() => onSave(title)}>save</Button>
         </div>
       </div>
     </div>
