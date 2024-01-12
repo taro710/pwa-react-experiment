@@ -9,7 +9,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/pwa-react-experiment/",
   "display": "standalone",
   "theme_color": "#ababab"
 }
