@@ -1,5 +1,5 @@
 import { marked } from "marked";
-import * as sanitizeHtml from "sanitize-html";
+import sanitizeHtml from "sanitize-html";
 
 // const worker: Worker = self as any;
 
