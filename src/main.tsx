@@ -13,7 +13,7 @@ export const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={"/"} element={<Editor text={text} setText={setText} />} />
+        <Route path={"*"} element={<Editor text={text} setText={setText} />} />
         <Route path={"/history"} element={<History setText={setText} />} />
       </Routes>
     </BrowserRouter>
